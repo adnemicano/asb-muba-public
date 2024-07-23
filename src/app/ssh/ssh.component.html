@@ -1,0 +1,107 @@
+<div class="container mt-5">
+  <h2>STANDAR SATUAN HARGA (SSH)</h2>
+  <h3>Edisi Ke - 2 Tahun 2023</h3>
+
+  <div class="row justify-content-center my-4">
+    <div class="col-md-3 mb-3">
+      <button class="btn btn-primary w-100" (click)="navigateToPenjelasan()">Penjelasan</button>
+    </div>
+    <div class="col-md-6 mb-3">
+      <input type="text" id="searchInput" class="form-control" placeholder="Cari data" [(ngModel)]="searchTerm">
+    </div>
+  </div>
+
+  <div class="row justify-content-center mb-4">
+    <div class="col-md-9">
+      <select id="kecamatanDropdown" class="form-select" [(ngModel)]="selectedKecamatan">
+        <option value="Kecamatan Lais">Kecamatan Lais</option>
+        <option value="Kecamatan Keluang">Kecamatan Keluang</option>
+        <option value="Kecamatan Sungai Lilin">Kecamatan Sungai Lilin</option>
+        <option value="Kecamatan Batanghari Leko">Kecamatan Batanghari Leko</option>
+        <option value="Kecamatan Sekayu">Kecamatan Sekayu</option>
+        <option value="Kecamatan Babat Supat">Kecamatan Babat  Supat</option>
+        <option value="Kecamatan Babat Toman">Kecamatan Babat Toman</option>
+        <option value="Kecamatan Sungai Keruh">Kecamatan Sungai Keruh</option>
+        <option value="Kecamatan Jirak Jaya">Kecamatan Jirak Jaya</option>
+        <option value="Kecamatan Bayung Lencir">Kecamatan Bayung Lencir</option>
+        <option value="Kecamatan Sanga Desa">Kecamatan Sanga Desa</option>
+        <option value="Kecamatan Lawang Wetan">Kecamatan Lawang Wetan</option>
+        <option value="Kecamatan Tungkal Jaya">Kecamatan Tungkal Jaya</option>
+        <option value="Kecamatan Plakat Tinggi">Kecamatan Plakat Tinggi</option>
+        <option value="Kecamatan Lalan">Kecamatan Lalan</option>
+        <!-- Add the rest of your options here -->
+      </select>
+    </div>
+  </div>
+
+  <ul class="nav nav-tabs justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="activeTab === 'bahan'" (click)="setActiveTab('bahan')">BAHAN</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="activeTab === 'upah'" (click)="setActiveTab('upah')">UPAH</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="activeTab === 'alat'" (click)="setActiveTab('alat')">ALAT</a>
+    </li>
+  </ul>
+
+  <div class="table-responsive my-4">
+    <table class="table table-bordered" *ngIf="activeTab === 'bahan'">
+      <thead class="table-success">
+        <tr>
+          <th>No.</th>
+          <th>Jenis</th>
+          <th>Bahan</th>
+          <th>Satuan</th>
+          <th>Harga (Rp)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="5">Tidak ditemukan data yang sesuai</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table table-bordered" *ngIf="activeTab === 'upah'">
+      <thead class="table-success">
+        <tr>
+          <th>No.</th>
+          <th>Nama</th>
+          <th>Satuan</th>
+          <th>Harga (Rp)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="4">Tidak ditemukan data yang sesuai</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table table-bordered" *ngIf="activeTab === 'alat'">
+      <thead class="table-success">
+        <tr>
+          <th>No.</th>
+          <th>Alat</th>
+          <th>Satuan</th>
+          <th>Harga (Rp)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="4">Tidak ditemukan data yang sesuai</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="notes">
+    <p>
+      Catatan : Harga satuan bahan bangunan yang tercantum tidak mengikat hanya sebagai ancar-ancar dalam menyusun perencanaan pekerjaan konstruksi oleh pada pemanfaat baik di lingkungan pemerintah, dunia usaha juga masyarakat jasa konstruksi
+    </p>
+  </div>
+
+  <app-penjelasan-modal [show]="showModal" (closeEvent)="closeModal()"></app-penjelasan-modal>
+</div>

@@ -1,0 +1,63 @@
+<div class="container">
+  <h2>HARGA SATUAN POKOK PEKERJAAN (HSPK)</h2>
+  <h3>Edisi Ke - 2 Tahun 2023</h3>
+
+  <div class="row justify-content-center my-4">
+    <div class="col-md-3 mb-3">
+      <button class="btn btn-primary w-100" (click)="navigateToPenjelasan()">Penjelasan</button>
+    </div>
+    <div class="col-md-6 mb-3">
+      <input type="text" id="searchInput" class="form-control" placeholder="Cari data" [(ngModel)]="searchTerm">
+    </div>
+  </div>
+
+  <div class="row justify-content-center mb-4">
+    <div class="col-md-9">
+      <select id="kecamatanDropdown" class="form-select" [(ngModel)]="selectedKecamatan">
+        <option value="">-- Pilih Kecamatan --</option>
+        <option value="Kecamatan Lais">Kecamatan Lais</option>
+        <option value="Kecamatan Keluang">Kecamatan Keluang</option>
+        <option value="Kecamatan Sungai Lilin">Kecamatan Sungai Lilin</option>
+        <option value="Kecamatan Batanghari Leko">Kecamatan Batanghari Leko</option>
+        <option value="Kecamatan Sekayu">Kecamatan Sekayu</option>
+        <option value="Kecamatan Babat Supat">Kecamatan Babat Supat</option>
+        <option value="Kecamatan Babat Toman">Kecamatan Babat Toman</option>
+        <option value="Kecamatan Sungai Keruh">Kecamatan Sungai Keruh</option>
+        <option value="Kecamatan Jirak Jaya">Kecamatan Jirak Jaya</option>
+        <option value="Kecamatan Bayung Lencir">Kecamatan Bayung Lencir</option>
+        <option value="Kecamatan Sanga Desa">Kecamatan Sanga Desa</option>
+        <option value="Kecamatan Lawang Wetan">Kecamatan Lawang Wetan</option>
+        <option value="Kecamatan Tungkal Jaya">Kecamatan Tungkal Jaya</option>
+        <option value="Kecamatan Plakat Tinggi">Kecamatan Plakat Tinggi</option>
+        <option value="Kecamatan Lalan">Kecamatan Lalan</option>
+        <!-- Add the rest of your options here -->
+      </select>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Kode</th>
+          <th>Uraian Pekerjaan</th>
+          <th>Satuan</th>
+          <th>Harga (Rp)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data; let i = index" (click)="openDetailModal(item)">
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.kode }}</td>
+          <td>{{ item.uraian }}</td>
+          <td>{{ item.satuan }}</td>
+          <td>{{ item.harga }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <app-penjelasan-modal [show]="showModal" (closeEvent)="closeModal()"></app-penjelasan-modal>
+  <app-detail-hspk [item]="selectedItem" [show]="showDetailModal" (closeEvent)="closeDetailModal()"></app-detail-hspk>
+</div>

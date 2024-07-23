@@ -1,0 +1,56 @@
+/* Footer Component Styles */
+.footer {
+  background-color: #097862;
+  width: 100%;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+.footer address {
+  font-style: normal;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.footer .social-icons a {
+  font-size: 24px;
+}
+
+.footer-bottom {
+  background-color: #005847;
+}
+
+.footer-bottom p {
+  margin-bottom: 0;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  
+}
+
+.list-unstyled li {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.list-unstyled a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.list-unstyled a:hover {
+  color: #ccc;
+}
+
+.visitors h5 {
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}

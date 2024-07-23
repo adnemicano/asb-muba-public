@@ -1,0 +1,74 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section-hero {
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.separator {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.separator svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+  .section-hero {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .banner img {
+    /* Optionally adjust image size or apply different styles for tablets */
+  }
+
+  .section-hero {
+    padding-top: 1.5rem;
+  }
+
+  .separator svg {
+    height: 80px; /* Adjust height for smaller screens if needed */
+  }
+}
+
+@media (max-width: 768px) {
+  .section-hero {
+    padding-top: 2rem;
+  }
+
+  .separator svg {
+    height: 60px; /* Adjust height for mobile screens if needed */
+  }
+}
+
+@media (max-width: 576px) {
+  .section-hero {
+    padding-top: 2.5rem;
+  }
+
+  .separator svg {
+    height: 40px; /* Adjust height for very small screens */
+  }
+
+  .banner img {
+    margin-top: 3rem; /* Lower the banner image on mobile devices */
+  }
+}

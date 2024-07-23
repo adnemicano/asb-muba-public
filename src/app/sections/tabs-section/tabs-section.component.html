@@ -1,0 +1,113 @@
+<div class="container">
+  <h3 class="h4 text-success font-weight-bold mb-4" id="text-title">Berita Analisa Standar Harga</h3>
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-4 card-container">
+      <!-- Tabs with icons -->
+      <div class="custom-tab-content flex-column flex-md-row">
+        <ul ngbNav #nav="ngbNav" [(activeId)]="active1" class="nav nav-pills justify-content-center" type="pills">
+          <li class="nav-item" [ngbNavItem]="1">
+            <ng-template ngbNavContent>
+              <div class="tab-content">
+                <p>03-07-2024</p>
+                <h6>SOSIALISASI DAN DISEMINASI PERATURAN JASA KONSTRUKSI UNTUK PENYEDIA JASA TAHUN 2024</h6>
+                <img src="assets/img/brand/img1.png" alt="img1.png" class="img-fluid">
+              </div>
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+      <div [ngbNavOutlet]="nav" class="custom-tab-content"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-4 card-container">
+      <!-- Menu -->
+      <div class="custom-tab-content flex-column flex-md-row">
+        <ul ngbNav #nav1="ngbNav" [(activeId)]="active" class="nav nav-pills justify-content-center" type="pills">
+          <li class="nav-item" [ngbNavItem]="1">
+            <ng-template ngbNavContent>
+              <div class="tab-content">
+                <p>02-07-2024</p>
+                <h6>SOSIALISASI DAN DISEMINASI PERATURAN JASA KONSTRUKSI UNTUK PENGGUNA JASA TAHUN 2024</h6>
+                <img src="assets/img/brand/img2.png" alt="img2.png" class="img-fluid">
+              </div>
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+      <div [ngbNavOutlet]="nav1" class="custom-tab-content"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-4 card-container">
+      <!-- Menu -->
+      <div class="custom-tab-content flex-column flex-md-row">
+        <ul ngbNav #nav2="ngbNav" [(activeId)]="active" class="nav nav-pills justify-content-center" type="pills">
+          <li class="nav-item" [ngbNavItem]="1">
+            <ng-template ngbNavContent>
+              <div class="tab-content">
+                <p>25-06-2024</p>
+                <h6>UJI SERTIFIKASI TENAGA KERJA KONSTRUKSI JENJANG 7 PROGRAM APRESIASI OPD SUB URUSAN JASA KONSTRUKSI TERBAIK</h6>
+                <img src="assets/img/brand/img3.png" alt="img3.png" class="img-fluid">
+              </div>
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+      <div [ngbNavOutlet]="nav2" class="custom-tab-content"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="h4 text-success font-weight-bold mb-4">Standar Harga</h3>
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-4 card-container">
+      <!-- Tabs with icons -->
+      <div class="custom-tab-content flex-column flex-md-row">
+        <ul ngbNav #nav3="ngbNav" [(activeId)]="active1" class="nav nav-pills justify-content-center" type="pills">
+          <li class="nav-item" [ngbNavItem]="1">
+            <ng-template ngbNavContent>
+              <div class="tab-content">
+                <h6>STANDAR SATUAN HARGA (SSH)</h6>
+                <img src="assets/img/brand/img4.png" alt="img4.png" class="img-fluid">
+                <p class="description">Harga Satuan Dasar yang selanjutnya disingkat HSD adalah harga satuan komponen dari harga satuan pekerjaan per satuan tertentu. Harga bahan bangunan yang tercantum merupakan hasil uji petik (sampling) harga di pasaran bebas oleh Tim Penyusun pada beberapa sumber (depo, quory, distributor, toko terpilih) yang digunakan sebagai acuan dalam proses pengolahan data.</p>
+              </div>
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+      <div [ngbNavOutlet]="nav3" class="custom-tab-content"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-4 card-container">
+      <!-- Menu -->
+      <div class="custom-tab-content flex-column flex-md-row">
+        <ul ngbNav #nav4="ngbNav" [(activeId)]="active" class="nav nav-pills justify-content-center" type="pills">
+          <li class="nav-item" [ngbNavItem]="1">
+            <ng-template ngbNavContent>
+              <div class="tab-content">
+                <h6>HARGA SATUAN POKOK PEKERJAAN (HSPK)</h6>
+                <img src="assets/img/brand/img4.png" alt="img4.png" class="img-fluid">
+                <p class="description">Biaya yang dihitung dengan analisis harga satuan suatu pekerjaan yang terdiri atas biaya langsung dan biaya tidak langsung sebagai mata pembayaran jenis pekerjaan tertentu, belum termasuk pajak pertambahan nilai berdasarkan Permen PU No.8 Tahun 2023 Tentang Pedoman Penyusunan Perkiraan Biaya Pekerjaan Konstruksi Bidang Pekerjaan Umum Dan Perumahan Rakyat.</p>
+              </div>
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+      <div [ngbNavOutlet]="nav4" class="custom-tab-content"></div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-4 card-container">
+      <!-- Menu -->
+      <div class="custom-tab-content flex-column flex-md-row">
+        <ul ngbNav #nav5="ngbNav" [(activeId)]="active" class="nav nav-pills justify-content-center" type="pills">
+          <li class="nav-item" [ngbNavItem]="1">
+            <ng-template ngbNavContent>
+              <div class="tab-content">
+                <h6>ANALISA STANDAR BELANJA (ASB)</h6>
+                <img src="assets/img/brand/img4.png" alt="img4.png" class="img-fluid">
+                <p class="description">Yaitu biaya paling banyak per meter persegi pelaksanaan konstruksi fisik pekerjaan standar untuk Pembangunan Bangunan Gedung Negara berdasarkan Permen PU No. 22/PRT/M/2018 Tentang Pembangunan Bangunan Gedung Negara.</p>
+              </div>
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+      <div [ngbNavOutlet]="nav5" class="custom-tab-content"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,91 @@
+<nav
+  id="navbar-main"
+  class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned"
+  style="background-color: #16A085;"
+>
+  <div class="container">
+    <a class="navbar-brand mr-lg-5" [routerLink]="['/home']">
+      <img src="./assets/img/brand/logo-asb-muba.png" class="navbar-logo" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="!isCollapsed"
+      aria-controls="navbar_global"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="navbar-collapse collapse"
+      id="navbar_global"
+      [ngbCollapse]="isCollapsed"
+    >
+      <div class="navbar-collapse-header">
+        <div class="row">
+          <div class="col-6 collapse-brand">
+            <a [routerLink]="['/home']">
+              <img src="./assets/img/brand/blue.png" />
+            </a>
+          </div>
+          <div class="col-6 collapse-close">
+            <button
+              type="button"
+              class="navbar-toggler"
+              (click)="isCollapsed = !isCollapsed"
+              [attr.aria-expanded]="!isCollapsed"
+              aria-controls="navbar_global"
+            >
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <ul
+        class="navbar-nav navbar-nav-hover align-items-lg-center"
+        style="margin-left: auto;"
+      >
+        <li class="nav-item">
+          <a [routerLink]="['/home']" class="nav-link no-caret" role="button" (click)="closeDropdown()">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text">Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/berita']" class="nav-link no-caret" role="button" (click)="closeDropdown()">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text">Berita</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link no-caret"
+            role="button"
+            (click)="toggleDropdown()"
+          >
+            <i class="ni ni-collection d-lg-none"></i>
+            <span class="nav-link-inner--text">Examples</span>
+          </a>
+          <div class="dropdown-menu" *ngIf="isDropdownOpen">
+            <a [routerLink]="['/ssh']" class="dropdown-item" (click)="closeDropdown()">Standar Satuan Harga (SSH)</a>
+            <a [routerLink]="['/hspk']" class="dropdown-item" (click)="closeDropdown()">Harga Satuan Pokok Pekerjaan (HSPK)</a>
+            <a [routerLink]="['/asb']" class="dropdown-item" (click)="closeDropdown()">Analisa Standar Belanja (ASB)</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/peraturan']" class="nav-link no-caret" role="button" (click)="closeDropdown()">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text">Peraturan</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/informasi']" class="nav-link no-caret" role="button" (click)="closeDropdown()">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text">Informasi</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

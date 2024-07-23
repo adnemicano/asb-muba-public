@@ -1,0 +1,96 @@
+.container {
+  max-width: 1200px;
+  margin-top: 6rem;
+}
+
+.title {
+  margin-top: 6rem;
+  text-align: center;
+  color: black;
+  font-weight: 800;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .row {
+    width: 100%;
+  }
+
+  img {
+    width: 80%;
+    height: auto;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card-title {
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #F4D03F;
+    padding: 0.5rem;
+    border-radius: 2px;
+    margin-bottom: 0.5rem;
+    color: black;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 800;
+  }
+}
+
+.title-lainnya {
+  margin-top: 8rem;
+}
+
+.list-group-item {
+  font-size: 0.9rem;
+}
+
+.list-group-item small {
+  display: block;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* Centering the content and adjusting for mobile view */
+@media (max-width: 576px) {
+  .container {
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .col-md-8, .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .card {
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .card-body {
+      align-items: center;
+    }
+
+    .card-title, .card-text {
+      text-align: center;
+    }
+  }
+
+  .title-lainnya {
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,58 @@
+/* Ensuring images adjust to their containers */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Centering text for small devices */
+@media (max-width: 767.98px) {
+    .tab-content h6 {
+        text-align: center;
+    }
+
+    .tab-content p {
+        text-align: center;
+    }
+}
+
+/* Making margin bottom for each column smaller on small devices */
+@media (max-width: 576px) {
+    .mb-4 {
+        margin-bottom: 2rem !important;
+    }
+}
+
+/* Rearranging tabs to be vertical on small devices */
+@media (max-width: 576px) {
+    .nav-pills .nav-item {
+        width: 100%;
+    }
+
+    .nav-pills .nav-link {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Adjusting font sizes on small devices */
+@media (max-width: 576px) {
+    .h4 {
+        font-size: 1.5rem;
+    }
+
+    .h6 {
+        font-size: 1rem;
+    }
+}
+
+/* Displaying one card per screen on small devices */
+@media (max-width: 576px) {
+
+    .col-lg-4,
+    .col-md-6,
+    .col-sm-12,
+    .col-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

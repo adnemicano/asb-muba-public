@@ -1,0 +1,152 @@
+<div class="modal" [class.show]="show" (click)="close()">
+  <div class="modal-dialog" (click)="stopPropagation($event)">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Analisa Harga Satuan Pekerjaan</h3>
+        <button type="button" class="close" (click)="close()">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h6>A.1.1.1 - HARGA SATUAN PEKERJAAN PERSIAPAN</h6>
+        <h6>A.1.1.1.1.1 - (K3) Pembuatan 1 m2 steger / perancah dari bambu s.d. tinggi 6 meter</h6>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Uraian</th>
+                <th>Kode</th>
+                <th>Satuan</th>
+                <th>Koefisien</th>
+                <th>Harga Satuan (Rp)</th>
+                <th>Jumlah Harga (Rp)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="kode">
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+              </tr>
+              <tr class="section-header">
+                <td colspan="1" class="bg-row-header">A</td>
+                <td colspan="6" class="bg-row-header">Tenaga Kerja</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>PEKERJA</td>
+                <td>L01</td>
+                <td>OH</td>
+                <td>1.00</td>
+                <td class="text-right">94.206</td>
+                <td class="text-right">94.206</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>TUKANG KAYU</td>
+                <td>L02</td>
+                <td>OH</td>
+                <td>2.00</td>
+                <td class="text-right">111.055</td>
+                <td class="text-right">222.110</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>KEPALA TUKANG</td>
+                <td>L03</td>
+                <td>OH</td>
+                <td>0.20</td>
+                <td class="text-right">128.000</td>
+                <td class="text-right">25.600</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>MANDOR</td>
+                <td>L04</td>
+                <td>OH</td>
+                <td>0.05</td>
+                <td class="text-right">125.685</td>
+                <td class="text-right">6.284</td>
+              </tr>
+              <tr>
+                <td colspan="6" class="text-right">Jumlah Harga Tenaga Kerja</td>
+                <td class="text-right">348.200</td>
+              </tr>
+              <tr class="section-header">
+                <td colspan="1" class="bg-row-header">B</td>
+                <td colspan="6" class="bg-row-header">Bahan</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Bambu diameter 6-8/600 cm</td>
+                <td></td>
+                <td>batang</td>
+                <td>1.25</td>
+                <td class="text-right">19.046</td>
+                <td class="text-right">23.808</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Tali ijuk</td>
+                <td></td>
+                <td>kg</td>
+                <td>0.186</td>
+                <td class="text-right">34.099</td>
+                <td class="text-right">6.342</td>
+              </tr>
+              <tr>
+                <td colspan="6" class="text-right">Jumlah Harga Bahan</td>
+                <td class="text-right">30.150</td>
+              </tr>
+              <tr class="section-header">
+                <td colspan="1" class="bg-row-header">C</td>
+                <td colspan="1" class="bg-row-header">Peralatan</td>
+                <td colspan="1" class="bg-row-header"></td>
+                <td colspan="1" class="bg-row-header"></td>
+                <td colspan="1" class="bg-row-header"></td>
+                <td colspan="1" class="bg-row-header"></td>
+                <td colspan="1" class="bg-row-header"></td>
+              </tr>
+              <tr>
+                <td colspan="6" class="text-right">Jumlah Harga Peralatan</td>
+                <td class="text-right">0</td>
+              </tr>
+              <tr class="section-header">
+                <td colspan="1" class="bg-row-header">D</td>
+                <td colspan="3" class="bg-row-header">Jumlah Harga Tenaga, Bahan dan Peralatan (A+B+C)</td>
+                <td colspan="1" class="bg-row-header"></td>
+                <td colspan="1" class="bg-row-header"></td>
+                <td colspan="1" class="bg-row-header">378.350</td>
+              </tr>
+              <tr class="section-header">
+                <td colspan="1" class="bg-row-header">E</td>
+                <td colspan="3" class="bg-row-header">Overhead + profit (10%)</td>
+                <td colspan="2" class="bg-row-header">10 % x D</td>
+                <td colspan="1" class="bg-row-header">37.835</td>
+              </tr>
+              <tr class="section-header">
+                <td colspan="1" class="bg-row-header">F</td>
+                <td colspan="3" class="bg-row-header">Harga Satuan Pekerjaan (D+E)</td>
+                <td colspan="1" class="bg-row-header"></td>
+                <td colspan="1" class="bg-row-header"></td>
+                <td colspan="1" class="bg-row-header">416.185</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h6>Catatan:</h6>
+        <p class="note">
+          Harga satuan bahan bangunan yang tercantum tidak mengikat hanya sebagai acuan dalam menyusun perencanaan pekerjaan konstruksi oleh pada pemanfaat baik di lingkungan pemerintah, dunia usaha juga masyarakat jasa konstruksi.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="close()">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
